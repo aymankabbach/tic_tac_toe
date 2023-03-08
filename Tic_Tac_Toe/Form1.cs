@@ -17,7 +17,7 @@ namespace tic_tac_toe
             InitializeComponent();
         }
 
-        private void btnReset_Click(object sender, EventArgs e)
+        void reset()
         {
             button1.Text = "";
             button2.Text = "";
@@ -30,158 +30,172 @@ namespace tic_tac_toe
             button9.Text = "";
             labPlayer.Text = "Player 1";
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        void Play(Button Btn)
         {
-            if (button1.Text=="")
+            if (Btn.Text == "")
             {
-                if (labPlayer.Text=="Player 1")
+                if (labPlayer.Text == "Player 1")
                 {
-                    button1.Text = "X";
+                    Btn.Text = "X";
                     labPlayer.Text = "Player 2";
+                    check_win("X");
                 }
                 else
                 {
-                    button1.Text = "O";
+                    Btn.Text = "O";
                     labPlayer.Text = "Player 1";
+                    check_win("O");
                 }
             }
+        }
+        void check_win(string mark)
+        {
+            if (button1.Text==mark && button2.Text==mark && button3.Text==mark)
+            {
+                if (mark=="X")
+                {
+                    MessageBox.Show("Player 1 wins","Info");
+                }
+                else
+                {
+                    MessageBox.Show("Player 2 wins", "Info");
+                }
+                reset();
+                    
+            }
+            else if (button4.Text == mark && button5.Text == mark && button6.Text == mark)
+            {
+                if (mark == "X")
+                {
+                    MessageBox.Show("Player 1 wins", "Info");
+                }
+                else
+                {
+                    MessageBox.Show("Player 2 wins", "Info");
+                }
+                reset();
+            }
+            else if (button7.Text == mark && button8.Text == mark && button9.Text == mark)
+            {
+                if(mark == "X")
+                {
+                    MessageBox.Show("Player 1 wins", "Info");
+                }
+                else
+                {
+                    MessageBox.Show("Player 2 wins", "Info");
+                }
+                reset();
+            }
+            else if (button1.Text == mark && button4.Text == mark && button7.Text == mark)
+            {
+                if (mark == "X")
+                {
+                    MessageBox.Show("Player 1 wins", "Info");
+                }
+                else
+                {
+                    MessageBox.Show("Player 2 wins", "Info");
+                }
+                reset();
+            }
+            else if (button2.Text == mark && button5.Text == mark && button8.Text == mark)
+            {
+                if(mark == "X")
+                {
+                    MessageBox.Show("Player 1 wins", "Info");
+                }
+                else
+                {
+                    MessageBox.Show("Player 2 wins", "Info");
+                }
+                reset();
+            }
+            else if (button3.Text == mark && button6.Text == mark && button9.Text == mark)
+            {
+                if (mark == "X")
+                {
+                    MessageBox.Show("Player 1 wins", "Info");
+                }
+                else
+                {
+                    MessageBox.Show("Player 2 wins", "Info");
+                }
+                reset();
+            }
+            else if (button1.Text == mark && button5.Text == mark && button9.Text == mark)
+            {
+                if (mark == "X")
+                {
+                    MessageBox.Show("Player 1 wins", "Info");
+                }
+                else
+                {
+                    MessageBox.Show("Player 2 wins", "Info");
+                }
+                reset();
+            }
+            else if (button3.Text == mark && button5.Text == mark && button7.Text == mark)
+            {
+                if (mark == "X")
+                {
+                    MessageBox.Show("Player 1 wins", "Info");
+                }
+                else
+                {
+                    MessageBox.Show("Player 2 wins", "Info");
+                }
+                reset();
+            }
+        }
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            reset();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Play(button1);  
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (button2.Text == "")
-            {
-                if (labPlayer.Text == "Player 1")
-                {
-                    button2.Text = "X";
-                    labPlayer.Text = "Player 2";
-                }
-                else
-                {
-                    button2.Text = "O";
-                    labPlayer.Text = "Player 1";
-                }
-            }
+            Play(button2);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (button3.Text == "")
-            {
-                if (labPlayer.Text == "Player 1")
-                {
-                    button3.Text = "X";
-                    labPlayer.Text = "Player 2";
-                }
-                else
-                {
-                    button3.Text = "O";
-                    labPlayer.Text = "Player 1";
-                }
-            }
+            Play(button3);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (button4.Text == "")
-            {
-                if (labPlayer.Text == "Player 1")
-                {
-                    button4.Text = "X";
-                    labPlayer.Text = "Player 2";
-                }
-                else
-                {
-                    button4.Text = "O";
-                    labPlayer.Text = "Player 1";
-                }
-            }
+            Play(button4);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (button5.Text == "")
-            {
-                if (labPlayer.Text == "Player 1")
-                {
-                    button5.Text = "X";
-                    labPlayer.Text = "Player 2";
-                }
-                else
-                {
-                    button5.Text = "O";
-                    labPlayer.Text = "Player 1";
-                }
-            }
+            Play(button5);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (button6.Text == "")
-            {
-                if (labPlayer.Text == "Player 1")
-                {
-                    button6.Text = "X";
-                    labPlayer.Text = "Player 2";
-                }
-                else
-                {
-                    button6.Text = "O";
-                    labPlayer.Text = "Player 1";
-                }
-            }
+            Play(button6);
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            if (button7.Text == "")
-            {
-                if (labPlayer.Text == "Player 1")
-                {
-                    button7.Text = "X";
-                    labPlayer.Text = "Player 2";
-                }
-                else
-                {
-                    button7.Text = "O";
-                    labPlayer.Text = "Player 1";
-                }
-            }
+            Play(button7);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (button8.Text == "")
-            {
-                if (labPlayer.Text == "Player 1")
-                {
-                    button8.Text = "X";
-                    labPlayer.Text = "Player 2";
-                }
-                else
-                {
-                    button8.Text = "O";
-                    labPlayer.Text = "Player 1";
-                }
-            }
+            Play(button8);
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            if (button9.Text == "")
-            {
-                if (labPlayer.Text == "Player 1")
-                {
-                    button9.Text = "X";
-                    labPlayer.Text = "Player 2";
-                }
-                else
-                {
-                    button9.Text = "O";
-                    labPlayer.Text = "Player 1";
-                }
-            }
+            Play(button9);
         }
     }
 }
