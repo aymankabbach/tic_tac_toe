@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Les informations générales relatives à un assembly dépendent de
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
-[assembly: AssemblyTitle("Tic_Tac_Toe")]
+[assembly: AssemblyTitle("tic_tac_toe")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Tic_Tac_Toe")]
+[assembly: AssemblyProduct("tic_tac_toe")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Le GUID suivant est pour l'ID de la typelib si ce projet est exposé à COM
-[assembly: Guid("50e33dfd-6bf2-4ac0-8e3b-0651c63f84de")]
+[assembly: Guid("4e057d74-57a3-4a94-99b6-424bcaa54001")]
 
 // Les informations de version pour un assembly se composent des quatre valeurs suivantes :
 //

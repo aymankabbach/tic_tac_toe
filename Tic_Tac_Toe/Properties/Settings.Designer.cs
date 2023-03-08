@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tic_Tac_Toe.Properties
+namespace tic_tac_toe.Properties
 {
 
 
